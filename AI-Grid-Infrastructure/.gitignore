@@ -1,0 +1,22 @@
+# Environment variables
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+venv/
+.venv/
+
+# Debug/scratch files
+_debug_*
+
+# OS
+.DS_Store
+
+# Testing
+.pytest_cache/
