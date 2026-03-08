@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --primary: 17 17 17;     /* #111 */
+    --accent: 255 235 59;    /* #ffeb3b */
+    --secondary: 240 240 240; /* #f0f0f0 */
+    --bg-dark: 245 245 245;  /* #f5f5f5 */
+    --success: 16 185 129;
+    --warning: 245 158 11;
+    --error: 239 68 68;
+    --info: 59 130 246;
+  }
+
+  body {
+    @apply bg-[#f5f5f5] text-ink antialiased selection:bg-accent/50;
+    font-family: 'Courier Prime', monospace;
+    background-image: repeating-linear-gradient(0deg, transparent, transparent 29px, #e5e5f7 29px, #e5e5f7 30px),
+                      repeating-linear-gradient(90deg, transparent, transparent 29px, #e5e5f7 29px, #e5e5f7 30px);
+    background-size: 30px 30px;
+  }
+
+  /* Custom Scrollbar */
+  ::-webkit-scrollbar {
+    @apply w-3;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-ink border-2 border-white hover:bg-gray-800;
+  }
+}
+
+@layer components {
+  /* DIY Zine Cards */
+  .glass-panel {
+    @apply bg-white border-none shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] relative p-6;
+    clip-path: polygon(
+      0% 5px, 2% 0%, 5% 5px, 8% 0%, 12% 5px, 15% 0%, 18% 5px, 22% 0%, 25% 5px, 28% 0%, 32% 5px, 35% 0%, 38% 5px, 42% 0%, 45% 5px, 48% 0%, 52% 5px, 55% 0%, 58% 5px, 
+      62% 0%, 65% 5px, 68% 0%, 72% 5px, 75% 0%, 78% 5px, 82% 0%, 85% 5px, 88% 0%, 92% 5px, 95% 0%, 98% 5px, 100% 0%,
+      100% 100%, 0% 100%
+    );
+  }
+
+  /* Tape Effect - Add via helper element or pseudo-element */
+  .tape-strip {
+    @apply absolute -top-3 left-1/2 -translate-x-1/2 w-32 h-8 bg-yellow-100/80 rotate-[-2deg] shadow-sm z-10;
+    clip-path: polygon(0% 5%, 5% 0%, 10% 5%, 15% 0%, 90% 0%, 95% 5%, 100% 0%, 100% 100%, 0% 100%);
+  }
+
+  .btn-primary {
+    @apply px-4 py-2 bg-ink text-white font-marker tracking-widest text-lg transition-transform hover:-translate-y-1 hover:shadow-[4px_4px_0px_0px_#ffeb3b] active:translate-y-0 active:shadow-none rotate-[-1deg];
+  }
+
+  .btn-secondary {
+    @apply px-4 py-2 bg-white text-ink border-2 border-ink font-typewriter font-bold hover:bg-gray-100 transition-colors shadow-[2px_2px_0px_0px_rgba(0,0,0,0.5)];
+  }
+
+  .input-field {
+    @apply w-full bg-transparent border-b-2 border-ink px-2 py-2 font-typewriter text-lg text-ink placeholder:text-gray-400 focus:outline-none focus:bg-yellow-50 focus:border-opacity-100 transition-colors rounded-none;
+  }
+}
+
+/* Animations */
+@keyframes slow-pulse {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.7;
+  }
+}
+
+.animate-slow-pulse {
+  animation: slow-pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
