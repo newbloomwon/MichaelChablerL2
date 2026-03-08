@@ -12,14 +12,16 @@ This repository consolidates five major projects developed from January 2026 to 
 ---
 
 
+
 ## L2 Builds
 
-Here are the four L2 builds (descriptions coming soon):
+Here are the five L2 builds, listed in order from earliest to latest:
 
-1. **L2 Build One** – [Placeholder description]
-2. **L2 Build Two** – [Placeholder description]
-3. **L2 Build Three** – [Placeholder description]
-4. **L2 Build Four** – [Placeholder description]
+1. **frodo (Ghost)**
+2. **Discografy**
+3. **punkt_project (Punkt)**
+4. **BabbleClone (LingoVision)**
+5. **AI-Grid-Infrastructure**
 
 ---
 
