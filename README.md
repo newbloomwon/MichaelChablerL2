@@ -39,6 +39,8 @@ This monorepo is a showcase of advanced, production-grade projects spanning data
 **Solution Overview:**
 Ghost is a privacy threat scanning tool that identifies and alerts users to digital spaces where their personal information may be at risk. By providing clear, actionable insights in a user-friendly interface, it empowers non-technical users to proactively protect their digital identity and reduce online exposure.
 
+**Tech Stack:** (See project for details)
+
 **Key Features:**
 - Scans digital spaces for privacy threats and exposures
 - Alerts users to personal data risks in real time
@@ -54,6 +56,8 @@ Ghost (frodo) empowers everyday users to reclaim their digital identity by movin
 **Solution Overview:**
 Discografy is a music discovery platform that connects fans with emerging artists through curated playlists and human tastemakers. By prioritizing taste leadership and exclusivity, it offers a unique, high-engagement alternative to algorithm-driven streaming, helping users find real music before it goes mainstream.
 
+**Tech Stack:** Vanilla JS, HTML/CSS, Electron, Firebase (Firestore/Auth/Storage)
+
 **Key Features:**
 - Human-curated music discovery (not algorithmic)
 - Curated "crates" and exclusive artist pipeline
@@ -68,6 +72,8 @@ Discografy is built for true music lovers—those who crave discovery, not just 
 
 **Solution Overview:**
 Punkt is an enterprise-grade log aggregation and analysis platform designed for real-time infrastructure monitoring and debugging. It solves the challenge of handling massive log volumes with sub-second latency, advanced search, and secure multi-tenant access, enabling teams to quickly identify and resolve issues.
+
+**Tech Stack:** React 18, TypeScript, Vite, Tailwind CSS, Recharts, FastAPI, PostgreSQL, Redis, Docker
 
 **Key Features:**
 - Real-time log streaming with sub-500ms latency
@@ -85,6 +91,8 @@ Punkt is a next-generation log aggregation and analysis platform built for enter
 **Solution Overview:**
 LingoVision (BabbleClone) is a language learning app that immerses users in Spanish vocabulary using images and native audio, eliminating the need for translation. Its unique "thinking gap" method and modern UI make language acquisition intuitive, engaging, and effective for learners of all ages.
 
+**Tech Stack:** React 17, Vite, Tailwind CSS, Framer Motion, Zustand, Node.js, Express, Supabase (PostgreSQL)
+
 **Key Features:**
 - Visual-first deciphering engine (image + audio, then word reveal)
 - Responsive, mobile-friendly UI with animations
@@ -99,6 +107,8 @@ LingoVision (BabbleClone) reimagines language learning by immersing users in Spa
 
 **Solution Overview:**
 AI-Grid-Infrastructure is a real-time dashboard and analytics platform for energy grid data from ERCOT and ISO-NE. It streamlines the process of collecting, visualizing, and analyzing live grid information, supporting energy market research and operational decision-making with reliable, accessible insights.
+
+**Tech Stack:** Python 3.11+, FastAPI, Streamlit, Pydantic, pytest
 
 **Key Features:**
 - Real-time data ingestion from ERCOT and ISO-NE
