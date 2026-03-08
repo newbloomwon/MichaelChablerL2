@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  frontend:
+    image: node:18
+    working_dir: /app
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    ports:
+      - "5173:5173"
+    environment:
+      - VITE_BACKEND_HTTP=http://mock-backend:3000
+      - VITE_BACKEND_WS=ws://mock-backend:3000/ws
+    command: sh -c "npm ci && npm run dev -- --host 0.0.0.0"
+
+  mock-backend:
+    build: ./docker/mock-backend
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=development
+    restart: unless-stopped

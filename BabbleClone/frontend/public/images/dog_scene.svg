@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <defs>
+    <linearGradient id="beachSky" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#87ceeb;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#fff;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#beachSky)" />
+  <!-- Sand -->
+  <rect y="350" width="800" height="250" fill="#f4a460" />
+  <!-- Water -->
+  <rect y="320" width="800" height="280" fill="#4db8ff" opacity="0.6" />
+  <!-- Sun -->
+  <circle cx="700" cy="100" r="60" fill="#ffeb3b" />
+  <!-- Happy running dog -->
+  <g transform="translate(300,280)">
+    <!-- Body -->
+    <ellipse cx="0" cy="0" rx="60" ry="45" fill="#ff8c42" />
+    <!-- Head -->
+    <circle cx="55" cy="-25" r="28" fill="#ff6b35" />
+    <!-- Ears -->
+    <ellipse cx="40" cy="-60" rx="14" ry="24" fill="#ff8c42" />
+    <ellipse cx="70" cy="-65" rx="14" ry="24" fill="#ff8c42" />
+    <!-- Eyes -->
+    <circle cx="60" cy="-30" r="4" fill="#000" />
+    <circle cx="45" cy="-30" r="4" fill="#000" />
+    <!-- Tail wagging -->
+    <path d="M-60 5 C -90 -30, -100 20, -70 35" stroke="#ff6b35" stroke-width="12" stroke-linecap="round" fill="none" />
+    <!-- Legs -->
+    <rect x="-30" y="40" width="12" height="40" rx="6" fill="#ff8c42" />
+    <rect x="0" y="40" width="12" height="40" rx="6" fill="#ff8c42" />
+    <rect x="30" y="40" width="12" height="40" rx="6" fill="#ff8c42" />
+    <rect x="50" y="40" width="12" height="40" rx="6" fill="#ff8c42" />
+    <!-- Tongue -->
+    <ellipse cx="60" cy="5" rx="8" ry="12" fill="#ff69b4" />
+  </g>
+  <!-- Beach ball -->
+  <circle cx="500" cy="380" r="20" fill="#ff69b4" />
+  <circle cx="495" cy="375" r="6" fill="#ffeb3b" />
+  <circle cx="505" cy="380" r="6" fill="#fff" />
+</svg>

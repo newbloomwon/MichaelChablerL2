@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <defs>
+    <linearGradient id="skyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#87ceeb;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e0f6ff;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#skyGrad)" />
+  <!-- Water -->
+  <ellipse cx="400" cy="420" rx="280" ry="100" fill="#4da6ff" />
+  <ellipse cx="400" cy="410" rx="280" ry="80" fill="#66b3ff" />
+  <!-- Person drinking water -->
+  <g transform="translate(200,200)">
+    <!-- Head -->
+    <circle cx="0" cy="0" r="20" fill="#d4a574" />
+    <!-- Body -->
+    <ellipse cx="0" cy="50" rx="24" ry="40" fill="#ff6b6b" />
+    <!-- Arm holding cup -->
+    <path d="M20 30 L60 20" stroke="#d4a574" stroke-width="8" stroke-linecap="round" />
+    <!-- Cup -->
+    <rect x="58" y="10" width="24" height="20" rx="4" fill="#fff" stroke="#999" stroke-width="2" />
+    <!-- Legs -->
+    <rect x="-8" y="85" width="6" height="30" fill="#333" />
+    <rect x="8" y="85" width="6" height="30" fill="#333" />
+  </g>
+  <!-- Water droplets -->
+  <circle cx="100" cy="300" r="8" fill="#4da6ff" opacity="0.6" />
+  <circle cx="650" cy="350" r="6" fill="#4da6ff" opacity="0.6" />
+</svg>

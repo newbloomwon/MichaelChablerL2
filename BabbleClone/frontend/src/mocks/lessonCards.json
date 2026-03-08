@@ -1,0 +1,101 @@
+[
+  {
+    "id": "1",
+    "type": "immersive",
+    "visual_url": "/images/GirlApple.png",
+    "audio_url": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3",
+    "target_text": "Manzana",
+    "english_bridge": "Apple",
+    "sentence": "Ella come una manzana en el parque."
+  },
+  {
+    "id": "2",
+    "type": "immersive",
+    "visual_url": "/images/CatSleeping.jpg",
+    "audio_url": "",
+    "target_text": "Gato",
+    "english_bridge": "Cat",
+    "sentence": "El gato duerme sobre el sofá."
+  },
+  {
+    "id": "3",
+    "type": "immersive",
+    "visual_url": "/images/reading-in-bed.jpg",
+    "audio_url": "",
+    "target_text": "Libro",
+    "english_bridge": "Book",
+    "sentence": "Leo un libro interesante antes de dormir."
+  },
+  {
+    "id": "4",
+    "type": "immersive",
+    "visual_url": "/images/House_with_small_garden.jpg",
+    "audio_url": "",
+    "target_text": "Casa",
+    "english_bridge": "House",
+    "sentence": "Nuestra casa tiene un jardín pequeño."
+  },
+  {
+    "id": "5",
+    "type": "immersive",
+    "visual_url": "/images/WaterAfterRun.jpg",
+    "audio_url": "",
+    "target_text": "Agua",
+    "english_bridge": "Water",
+    "sentence": "Bebo agua después de correr."
+  },
+  {
+    "id": "6",
+    "type": "immersive",
+    "visual_url": "/images/child-smelling-flowers-in-the-garden.jpg",
+    "audio_url": "",
+    "target_text": "Flor",
+    "english_bridge": "Flower",
+    "sentence": "La flor huele muy bien en el jardín."
+  },
+  {
+    "id": "7",
+    "type": "immersive",
+    "visual_url": "/images/SunShineSummer.jpeg",
+    "audio_url": "",
+    "target_text": "Sol",
+    "english_bridge": "Sun",
+    "sentence": "El sol brilla en un día de verano."
+  },
+  {
+    "id": "8",
+    "type": "immersive",
+    "visual_url": "/images/TreeUnderBlossoms.jpeg",
+    "audio_url": "",
+    "target_text": "Árbol",
+    "english_bridge": "Tree",
+    "sentence": "Nos sentamos bajo el árbol cuando hace calor."
+  },
+  {
+    "id": "9",
+    "type": "immersive",
+    "visual_url": "/images/HappyRunningBeachDog.jpeg",
+    "audio_url": "",
+    "target_text": "Perro",
+    "english_bridge": "Dog",
+    "sentence": "El perro corre feliz por la playa."
+  },
+  {
+    "id": "10",
+    "type": "immersive",
+    "visual_url": "/images/BuyingFreshBread.jpeg",
+    "audio_url": "",
+    "target_text": "Pan",
+    "english_bridge": "Bread",
+    "sentence": "Compré pan fresco en la panadería."
+  },
+  {
+    "id": "11",
+    "type": "immersive",
+    "visual_url": "/images/SkiTrees.jpeg",
+    "audio_url": "",
+    "target_text": "Cuidado",
+    "english_bridge": "Watch out",
+    "sentence": "¡Cuidado, Eduardo!"
+  }
+]

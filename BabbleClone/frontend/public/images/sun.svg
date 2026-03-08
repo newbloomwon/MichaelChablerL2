@@ -1,0 +1,21 @@
+<svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="sunGlow" cx="50%" cy="50%">
+      <stop offset="0%" style="stop-color:#ffeb3b;stop-opacity:1" />
+      <stop offset="70%" style="stop-color:#fbc02d;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f9a825;stop-opacity:0.3" />
+    </radialGradient>
+  </defs>
+  <rect width="400" height="400" fill="#87ceeb"/>
+  <circle cx="200" cy="150" r="70" fill="url(#sunGlow)"/>
+  <g stroke="#fbc02d" stroke-width="8" stroke-linecap="round" fill="none">
+    <line x1="200" y1="40" x2="200" y2="10"/>
+    <line x1="200" y1="290" x2="200" y2="320"/>
+    <line x1="310" y1="150" x2="340" y2="150"/>
+    <line x1="60" y1="150" x2="30" y2="150"/>
+    <line x1="275" y1="75" x2="295" y2="55"/>
+    <line x1="105" y1="245" x2="85" y2="265"/>
+    <line x1="275" y1="225" x2="295" y2="245"/>
+    <line x1="105" y1="55" x2="85" y2="35"/>
+  </g>
+</svg>

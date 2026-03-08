@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <defs>
+    <style>
+      .sky { fill: #cfeefe }
+      .grass { fill: #c6f6d5 }
+      .tree { fill: #68d391 }
+      .trunk { fill: #8b5e3c }
+      .dress { fill: #ffb4c6 }
+      .hair { fill: #6b4f2a }
+      .apple { fill: #ff4d4f }
+      .bench { fill: #f6e05e }
+    </style>
+  </defs>
+
+  <rect width="800" height="600" class="sky" />
+  <rect y="420" width="800" height="180" class="grass" />
+
+  <!-- Tree -->
+  <g transform="translate(600,260)">
+    <ellipse cx="0" cy="0" rx="80" ry="90" class="tree" />
+    <rect x="-15" y="60" width="30" height="80" rx="6" class="trunk" />
+  </g>
+
+  <!-- Bench -->
+  <g transform="translate(220,360)">
+    <rect x="0" y="0" width="220" height="14" rx="6" class="bench" />
+    <rect x="10" y="14" width="8" height="40" class="trunk" />
+    <rect x="202" y="14" width="8" height="40" class="trunk" />
+  </g>
+
+  <!-- Girl sitting on bench -->
+  <g transform="translate(260,310)">
+    <!-- body -->
+    <ellipse cx="40" cy="38" rx="24" ry="30" class="dress" />
+    <!-- head -->
+    <circle cx="40" cy="8" r="18" class="hair" />
+    <!-- hair fringe -->
+    <path d="M26 2 C34 12, 46 12, 54 2" fill="#5a3f28" />
+    <!-- arm holding apple -->
+    <path d="M56 28 C72 30, 74 18, 60 18" stroke="#6b4f2a" stroke-width="4" fill="none" stroke-linecap="round" />
+    <!-- apple in hand -->
+    <circle cx="62" cy="18" r="8" class="apple" stroke="#a8272e" stroke-width="1" />
+    <!-- legs -->
+    <path d="M30 64 L36 86" stroke="#6b4f2a" stroke-width="6" stroke-linecap="round" />
+    <path d="M50 64 L56 86" stroke="#6b4f2a" stroke-width="6" stroke-linecap="round" />
+  </g>
+
+  <!-- Small park details -->
+  <g transform="translate(120,480)">
+    <circle cx="0" cy="0" r="6" fill="#9ae6b4" />
+    <circle cx="20" cy="-4" r="4" fill="#b7f5cc" />
+  </g>
+
+</svg>

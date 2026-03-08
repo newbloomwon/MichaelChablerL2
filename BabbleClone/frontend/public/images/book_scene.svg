@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <rect width="800" height="600" fill="#f5f1e8" />
+  <!-- Bed -->
+  <g transform="translate(150,280)">
+    <rect x="0" y="0" width="500" height="280" rx="12" fill="#fff" stroke="#ddd" stroke-width="2" />
+    <rect x="20" y="20" width="460" height="240" fill="#fce8d6" />
+    <!-- Pillow -->
+    <ellipse cx="250" cy="60" rx="120" ry="40" fill="#fff8dc" />
+    <!-- Blanket fold -->
+    <path d="M20 160 L480 160 L480 240 Q250 280, 20 240 Z" fill="#ffb6c1" opacity="0.7" />
+  </g>
+  <!-- Person reading in bed -->
+  <g transform="translate(280,240)">
+    <!-- Head on pillow -->
+    <circle cx="0" cy="-20" r="18" fill="#d4a574" />
+    <!-- Body under blanket -->
+    <ellipse cx="0" cy="30" rx="24" ry="50" fill="#ffb6c1" />
+    <!-- Arms holding book -->
+    <path d="M-20 10 L-60 0" stroke="#d4a574" stroke-width="7" stroke-linecap="round" />
+    <path d="M20 10 L60 0" stroke="#d4a574" stroke-width="7" stroke-linecap="round" />
+  </g>
+  <!-- Book -->
+  <g transform="translate(180,200)">
+    <rect x="0" y="0" width="120" height="100" rx="4" fill="#d32f2f" stroke="#8b0000" stroke-width="2" />
+    <rect x="4" y="4" width="112" height="92" fill="#ff6b6b" />
+    <text x="60" y="55" font-size="16" font-weight="bold" fill="#fff" text-anchor="middle">Libro</text>
+  </g>
+  <!-- Nightstand lamp -->
+  <g transform="translate(650,200)">
+    <line x1="0" y1="0" x2="0" y2="100" stroke="#888" stroke-width="4" />
+    <ellipse cx="0" cy="-10" rx="35" ry="20" fill="#ffd700" opacity="0.8" />
+    <circle cx="0" cy="100" r="20" fill="#8b4513" />
+  </g>
+</svg>

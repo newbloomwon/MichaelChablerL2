@@ -1,0 +1,23 @@
+<svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="dogFace" cx="35%" cy="35%">
+      <stop offset="0%" style="stop-color:#d7860f;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#a1640f;stop-opacity:1" />
+    </radialGradient>
+  </defs>
+  <rect width="400" height="400" fill="#fafafa"/>
+  <ellipse cx="200" cy="220" rx="110" ry="130" fill="url(#dogFace)"/>
+  <circle cx="200" cy="120" r="100" fill="#c67c4e"/>
+  <polygon points="130,80 110,30 150,70" fill="#8d5e2f"/>
+  <polygon points="270,80 290,30 250,70" fill="#8d5e2f"/>
+  <circle cx="170" cy="100" r="22" fill="#fff"/>
+  <circle cx="230" cy="100" r="22" fill="#fff"/>
+  <circle cx="175" cy="95" r="14" fill="#000"/>
+  <circle cx="235" cy="95" r="14" fill="#000"/>
+  <circle cx="180" cy="90" r="6" fill="#fff"/>
+  <circle cx="240" cy="90" r="6" fill="#fff"/>
+  <ellipse cx="200" cy="150" rx="18" ry="25" fill="#d7860f"/>
+  <circle cx="200" cy="160" r="8" fill="#3e2723"/>
+  <path d="M 200 170 Q 185 185 170 180" stroke="#3e2723" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <path d="M 200 170 Q 215 185 230 180" stroke="#3e2723" stroke-width="3" fill="none" stroke-linecap="round"/>
+</svg>

@@ -1,0 +1,58 @@
+name: Frontend E2E (Playwright)
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  e2e:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+            node-version: '20'
+
+      - name: Check for frontend directory
+        id: check_frontend
+        run: |
+          if [ ! -d "frontend" ]; then
+            echo "::set-output name=skip::true"
+          fi
+
+      - name: Install frontend dependencies
+        if: steps.check_frontend.outputs.skip != 'true'
+        run: |
+          cd frontend
+          npm ci
+
+      - name: Install Playwright browsers
+        if: steps.check_frontend.outputs.skip != 'true'
+        run: |
+          cd frontend
+          npx playwright install --with-deps
+
+      - name: Start dev server in background and wait
+        if: steps.check_frontend.outputs.skip != 'true'
+        run: |
+          cd frontend
+          npm run dev -- --host 0.0.0.0 &>/tmp/vite.log &
+          npx wait-on http://localhost:5173
+
+      - name: Run Playwright tests
+        if: steps.check_frontend.outputs.skip != 'true'
+        run: |
+          cd frontend
+          npx playwright test --reporter=github
+
+      - name: Upload Playwright report
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-report
+          path: frontend/playwright-report

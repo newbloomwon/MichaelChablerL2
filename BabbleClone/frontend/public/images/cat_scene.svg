@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <defs>
+    <style>
+      .bg { fill: #f3f4f6 }
+      .sofa { fill: #fbbf24 }
+      .sofa-cush { fill: #f59e0b }
+      .cat { fill: #a78bfa }
+      .cat-spot { fill: #6b21a8 }
+      .floor { fill: #fde68a }
+      .text { fill: #1f2937; font-size: 28px; font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial }
+    </style>
+  </defs>
+
+  <rect width="800" height="600" class="bg" />
+  <rect y="420" width="800" height="180" class="floor" />
+
+  <!-- Sofa -->
+  <g transform="translate(120,260)">
+    <rect x="0" y="0" width="560" height="140" rx="20" class="sofa" />
+    <rect x="20" y="10" width="520" height="100" rx="16" class="sofa-cush" />
+    <!-- armrests -->
+    <rect x="-20" y="10" width="40" height="90" rx="12" class="sofa" />
+    <rect x="540" y="10" width="40" height="90" rx="12" class="sofa" />
+  </g>
+
+  <!-- Cat sleeping on sofa -->
+  <g transform="translate(360,300)">
+    <!-- body -->
+    <ellipse cx="0" cy="28" rx="80" ry="38" class="cat" />
+    <!-- head tucked in -->
+    <circle cx="55" cy="10" r="24" class="cat-spot" />
+    <!-- tail -->
+    <path d="M-80 40 C -120 46, -120 20, -80 28" stroke="#7c3aed" stroke-width="16" stroke-linecap="round" fill="none" />
+    <!-- whiskers (simplified) -->
+    <path d="M68 12 L88 6" stroke="#5b21b6" stroke-width="3" stroke-linecap="round" />
+    <path d="M68 16 L92 16" stroke="#5b21b6" stroke-width="3" stroke-linecap="round" />
+  </g>
+
+  <!-- Small rug -->
+  <ellipse cx="400" cy="470" rx="220" ry="36" fill="#fff7ed" opacity="0.8" />
+
+</svg>

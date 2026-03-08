@@ -1,0 +1,20 @@
+<svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="breadGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#d2b48c;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#8b6914;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="400" height="400" fill="#fafafa"/>
+  <ellipse cx="200" cy="220" rx="100" ry="120" fill="url(#breadGrad)" stroke="#654321" stroke-width="3"/>
+  <ellipse cx="200" cy="120" rx="85" ry="90" fill="#deb887"/>
+  <g fill="#8b6914" opacity="0.3">
+    <circle cx="150" cy="150" r="20"/>
+    <circle cx="200" cy="130" r="18"/>
+    <circle cx="250" cy="160" r="22"/>
+    <circle cx="170" cy="220" r="19"/>
+    <circle cx="230" cy="210" r="21"/>
+  </g>
+  <path d="M 130 160 Q 150 140 170 150" stroke="#a0826d" stroke-width="2" fill="none" opacity="0.5"/>
+  <path d="M 230 140 Q 250 130 270 145" stroke="#a0826d" stroke-width="2" fill="none" opacity="0.5"/>
+</svg>

@@ -1,0 +1,23 @@
+<svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="flowerCenter" cx="40%" cy="40%">
+      <stop offset="0%" style="stop-color:#ffeb3b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#fbc02d;stop-opacity:1" />
+    </radialGradient>
+  </defs>
+  <rect width="400" height="400" fill="#fafafa"/>
+  <line x1="200" y1="320" x2="200" y2="140" stroke="#2e7d32" stroke-width="8"/>
+  <g>
+    <circle cx="200" cy="100" r="45" fill="#e91e63"/>
+    <circle cx="140" cy="70" r="42" fill="#ec407a"/>
+    <circle cx="260" cy="70" r="42" fill="#ec407a"/>
+    <circle cx="130" cy="140" r="40" fill="#f06292"/>
+    <circle cx="270" cy="140" r="40" fill="#f06292"/>
+  </g>
+  <circle cx="200" cy="100" r="28" fill="url(#flowerCenter)"/>
+  <circle cx="200" cy="100" r="20" fill="#fdd835"/>
+  <g fill="#4caf50" opacity="0.7">
+    <ellipse cx="160" cy="250" rx="20" ry="40" transform="rotate(-30 160 250)"/>
+    <ellipse cx="240" cy="260" rx="20" ry="40" transform="rotate(30 240 260)"/>
+  </g>
+</svg>
