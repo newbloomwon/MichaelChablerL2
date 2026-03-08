@@ -36,11 +36,17 @@ This monorepo is a showcase of advanced, production-grade projects spanning data
 
 ### 1. frodo (Ghost)
 
+**Solution Overview:**
+Ghost is a privacy threat scanning tool that identifies and alerts users to digital spaces where their personal information may be at risk. By providing clear, actionable insights in a user-friendly interface, it empowers non-technical users to proactively protect their digital identity and reduce online exposure.
+
 **A privacy threat scanning tool for everyday users.**
 
 Ghost (frodo) empowers everyday users to reclaim their digital identity by moving from total exposure to strategic invisibility. In a world where personal information is constantly at risk, Ghost scans digital spaces and alerts users to potential privacy threats—helping them understand where their data might be exposed or compromised. The tool is designed for non-technical audiences, providing clear, actionable insights and a user-friendly interface. Ghost’s mission is to make privacy protection accessible, proactive, and effective for anyone concerned about their online footprint.
 
 ### 2. Discografy
+
+**Solution Overview:**
+Discografy is a music discovery platform that connects fans with emerging artists through curated playlists and human tastemakers. By prioritizing taste leadership and exclusivity, it offers a unique, high-engagement alternative to algorithm-driven streaming, helping users find real music before it goes mainstream.
 
 **A music discovery and curation platform.**
 
@@ -48,17 +54,26 @@ Discografy is built for true music lovers—those who crave discovery, not just 
 
 ### 3. punkt_project (Punkt)
 
+**Solution Overview:**
+Punkt is an enterprise-grade log aggregation and analysis platform designed for real-time infrastructure monitoring and debugging. It solves the challenge of handling massive log volumes with sub-second latency, advanced search, and secure multi-tenant access, enabling teams to quickly identify and resolve issues.
+
 **A Splunk-inspired enterprise log analysis platform.**
 
 Punkt is a next-generation log aggregation and analysis platform built for enterprise environments that demand speed, security, and clarity. It streams logs in real time with sub-500ms latency, supports advanced search with a custom query language, and visualizes data through interactive, glassmorphism-inspired dashboards. Designed for multi-tenant use, Punkt enforces strict row-level security and supports chunked ingestion for massive log files. Its architecture combines a React/TypeScript frontend with a FastAPI backend, PostgreSQL for storage, and Redis for real-time features. Punkt empowers teams to monitor, debug, and analyze infrastructure with confidence and style.
 
 ### 4. BabbleClone (LingoVision)
 
+**Solution Overview:**
+LingoVision (BabbleClone) is a language learning app that immerses users in Spanish vocabulary using images and native audio, eliminating the need for translation. Its unique "thinking gap" method and modern UI make language acquisition intuitive, engaging, and effective for learners of all ages.
+
 **A visual-first language learning MVP.**
 
 LingoVision (BabbleClone) reimagines language learning by immersing users in Spanish vocabulary lessons that rely solely on images and native audio—no translations, just pure context-driven understanding. The app’s "thinking gap" method encourages direct neural connections between concepts and words, making learning more natural and memorable. With a clean, modern UI, responsive design, and seamless audio-visual flow, users progress through lessons in a way that feels more like play than study. The backend, powered by Node.js and Supabase, ensures fast, secure access to lesson content, while the frontend delivers a delightful, distraction-free experience for learners of all ages.
 
 ### 5. AI-Grid-Infrastructure
+
+**Solution Overview:**
+AI-Grid-Infrastructure is a real-time dashboard and analytics platform for energy grid data from ERCOT and ISO-NE. It streamlines the process of collecting, visualizing, and analyzing live grid information, supporting energy market research and operational decision-making with reliable, accessible insights.
 
 **A real-time energy grid dashboard and analytics platform.**
 
