@@ -40,7 +40,6 @@ This monorepo is a showcase of advanced, production-grade projects spanning data
 Ghost is a privacy threat scanning tool that identifies and alerts users to digital spaces where their personal information may be at risk. By providing clear, actionable insights in a user-friendly interface, it empowers non-technical users to proactively protect their digital identity and reduce online exposure.
 
 **Tech Stack:** Electron, JavaScript, HTML/CSS, Firebase (Firestore/Auth/Storage)
-**Tech Stack:** Electron, JavaScript, HTML/CSS, Firebase (Firestore/Auth/Storage)
 
 **Key Features:**
 - Scans digital spaces for privacy threats and exposures
