@@ -40,6 +40,7 @@ This monorepo is a showcase of advanced, production-grade projects spanning data
 Ghost is a privacy threat scanning tool that identifies and alerts users to digital spaces where their personal information may be at risk. By providing clear, actionable insights in a user-friendly interface, it empowers non-technical users to proactively protect their digital identity and reduce online exposure.
 
 **Tech Stack:** (See project for details)
+**Tech Stack:** Electron, JavaScript, HTML/CSS, Firebase (Firestore/Auth/Storage)
 
 **Key Features:**
 - Scans digital spaces for privacy threats and exposures
@@ -122,90 +123,6 @@ AI-Grid-Infrastructure delivers real-time energy grid data from ERCOT (Texas) an
 
 ---
 
-## Technical Breakdown
-
-
-### frodo (Ghost)
-**Stack:** (See project for details)
-
-- Alerts users to privacy threats and exposures
-- Scans digital spaces for personal data risks
-- Designed for non-technical users
-- Executive summary and vision focused on digital identity protection
-
----
-
-### Discografy
-**Stack:** Vanilla JS, HTML/CSS, Electron, Firebase (Firestore/Auth/Storage)
-
-- Human-curated music discovery (not algorithmic)
-- Curator network effects and exclusive artist pipeline
-- Random discovery engine and curated "crates"
-- One-tap download for "real music"
-- Firebase integration for data and auth
-- Electron desktop wrapper and web demo
-
-**Business Model:**
-- Taste leadership, exclusivity, and viral curator sharing
-- Optimized LTV:CAC ratio and phased path to profitability
-
----
-
-### punkt_project (Punkt)
-**Stack:** React 18, TypeScript, Vite, Tailwind CSS, Recharts, FastAPI, PostgreSQL, Redis, Docker
-
-- Real-time log streaming (sub-500ms latency)
-- Advanced search with custom query language
-- Interactive analytics: time-series, aggregation charts
-- Row-Level Security for multi-tenant data
-- Chunked ingestion for large log files
-- Modern, glassmorphism-inspired UI
-- Full OpenAPI docs and robust test suites
-
-**Quickstart:**
-```bash
-docker-compose up --build
-# or run frontend/backend separately
-```
-
----
-
-### BabbleClone (LingoVision)
-**Stack:** React 17, Vite, Tailwind CSS, Framer Motion, Zustand, Node.js, Express, Supabase (PostgreSQL)
-
-- Visual-first deciphering engine (image + audio, then word reveal)
-- Responsive, mobile-friendly UI with animations
-- REST API backend with public read access (RLS)
-- Supabase for persistent lesson and card data
-- End-to-end browser testing with Playwright
-
-**Architecture:**
-```
-React Frontend (Vite) → Express Backend (Node.js) → Supabase (PostgreSQL)
-```
-
----
-
-### AI-Grid-Infrastructure
-**Stack:** Python 3.11+, FastAPI, Streamlit, Pydantic, pytest
-
-- Real-time data ingestion from ERCOT and ISO-NE
-- FastAPI backend with documented REST endpoints
-- Streamlit dashboard for live visualization
-- Modular code: api/, panels/, scripts/, tests/
-- Environment-based config and .env support
-- Example endpoints: `/ercot/prices`, `/isone/lmp/realtime`, `/ercot/frequency`
-
-**Quickstart:**
-```bash
-python -m venv .venv
-source .venv/bin/activate
-pip install -r requirements.txt
-uvicorn api.main:app --reload
-streamlit run streamlit_app/app.py
-```
-
----
 
 ## Usage
 
