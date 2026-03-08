@@ -1,7 +1,25 @@
 
+
 # MichaelChablerL2: Project Portfolio
 
+## About Me
+
+I love creating exciting designs that draw people in. I love solving problems.
+
+
 This repository consolidates five major projects developed from January 2026 to present. Each project is organized in its own subdirectory and represents a unique technical and product challenge.
+
+---
+
+
+## L2 Builds
+
+Here are the four L2 builds (descriptions coming soon):
+
+1. **L2 Build One** – [Placeholder description]
+2. **L2 Build Two** – [Placeholder description]
+3. **L2 Build Three** – [Placeholder description]
+4. **L2 Build Four** – [Placeholder description]
 
 ---
 
