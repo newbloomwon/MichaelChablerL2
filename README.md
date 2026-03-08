@@ -9,13 +9,13 @@ A platform for managing and simulating energy grid infrastructure using AI-drive
 A real-time chat application inspired by Babble, featuring user authentication, message persistence, and a modern web interface.
 
 ## 3. punkt_project
-A toolkit for natural language processing, focusing on sentence boundary detection and tokenization, with Python modules and sample data.
+A clone of Splunk, with custom GUI design changes for improved data visualization and user experience.
 
 ## 4. Discografy
 A music discography management tool for cataloging artists, albums, and tracks, with search and visualization features.
 
 ## 5. frodo
-A project for ... (add a short description of frodo here if desired).
+A privacy tool to help people scan online for their own privacy threats and exposures.
 
 ---
 
