@@ -4,19 +4,21 @@ Run with:
     streamlit run streamlit_app/app.py
 """
 
+
 import requests
 import streamlit as st
 import pandas as pd
+from typing import Optional
 
 API_BASE = "http://localhost:8000"
 
 st.set_page_config(
     page_title="Energy Grid Dashboard",
-    page_icon="⚡",
+    page_icon="",
     layout="wide",
 )
 
-st.title("⚡ Energy Grid Dashboard")
+st.title("Energy Grid Dashboard")
 st.caption("Real-time data from ERCOT (Texas) and ISO-NE (New England)")
 
 # ─── Sidebar ─────────────────────────────────────────────────────────────────
@@ -32,7 +34,7 @@ with st.sidebar:
         )
 
 
-def fetch(endpoint: str) -> dict | None:
+def fetch(endpoint: str) -> Optional[dict]:
     try:
         resp = requests.get(f"{api_host}{endpoint}", timeout=10)
         resp.raise_for_status()
@@ -42,8 +44,13 @@ def fetch(endpoint: str) -> dict | None:
         return None
 
 
-# ─── ERCOT ───────────────────────────────────────────────────────────────────
-st.header("🤠 ERCOT — Texas Grid")
+
+
+flag_col, title_col = st.columns([1, 10])
+with flag_col:
+    st.image("assets/texas_flag.png", width=48)
+with title_col:
+    st.header("ERCOT — Texas Grid")
 
 col1, col2 = st.columns(2)
 
@@ -61,8 +68,13 @@ with col2:
     if data:
         st.json(data)
 
-# ─── ISO-NE ──────────────────────────────────────────────────────────────────
-st.header("🏔️ ISO-NE — New England Grid")
+
+
+flag_col, title_col = st.columns([1, 10])
+with flag_col:
+    st.image("assets/maine_flag.png", width=48)
+with title_col:
+    st.header("ISO-NE — New England Grid")
 
 col3, col4, col5 = st.columns(3)
 

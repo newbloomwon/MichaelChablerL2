@@ -35,6 +35,9 @@ This monorepo is a showcase of advanced, production-grade projects spanning data
 ## Project Overviews
 
 ### 1. frodo (Ghost)
+<p align="center">
+  <img src="../Screenshots/Frodo.png" alt="Frodo screenshot" width="500" style="border-radius:12px;box-shadow:0 2px 12px #0002;" />
+</p>
 
 **Solution Overview:**
 Ghost is a privacy threat scanning tool that identifies and alerts users to digital spaces where their personal information may be at risk. By providing clear, actionable insights in a user-friendly interface, it empowers non-technical users to proactively protect their digital identity and reduce online exposure.
@@ -52,6 +55,9 @@ Ghost is a privacy threat scanning tool that identifies and alerts users to digi
 Ghost (frodo) empowers everyday users to reclaim their digital identity by moving from total exposure to strategic invisibility. In a world where personal information is constantly at risk, Ghost scans digital spaces and alerts users to potential privacy threats—helping them understand where their data might be exposed or compromised. The tool is designed for non-technical audiences, providing clear, actionable insights and a user-friendly interface. Ghost’s mission is to make privacy protection accessible, proactive, and effective for anyone concerned about their online footprint.
 
 ### 2. Discografy
+<p align="center">
+  <img src="../Screenshots/Discocrafy.png" alt="Discografy screenshot" width="500" style="border-radius:12px;box-shadow:0 2px 12px #0002;" />
+</p>
 
 **Solution Overview:**
 Discografy is a music discovery platform that connects fans with emerging artists through curated playlists and human tastemakers. By prioritizing taste leadership and exclusivity, it offers a unique, high-engagement alternative to algorithm-driven streaming, helping users find real music before it goes mainstream.
@@ -69,6 +75,9 @@ Discografy is a music discovery platform that connects fans with emerging artist
 Discografy is built for true music lovers—those who crave discovery, not just background noise. Unlike algorithm-driven platforms, Discografy puts human curators at the center, letting genre experts and influencers share their taste and build loyal followings. Fans discover emerging artists through curated "crates" and a high-friction, intentional discovery engine that rewards active listening. The platform’s business model is rooted in exclusivity: artists can offer new releases first on Discografy for higher royalties, while curators drive organic growth by bringing their audiences. With a focus on taste leadership, community, and real music, Discografy aims to reshape how people find and value new sounds.
 
 ### 3. punkt_project (Punkt)
+<p align="center">
+  <img src="../Screenshots/Punkt.png" alt="Punkt screenshot" width="500" style="border-radius:12px;box-shadow:0 2px 12px #0002;" />
+</p>
 
 **Solution Overview:**
 Punkt is an enterprise-grade log aggregation and analysis platform designed for real-time infrastructure monitoring and debugging. It solves the challenge of handling massive log volumes with sub-second latency, advanced search, and secure multi-tenant access, enabling teams to quickly identify and resolve issues.
@@ -86,7 +95,11 @@ Punkt is an enterprise-grade log aggregation and analysis platform designed for 
 
 Punkt is a next-generation log aggregation and analysis platform built for enterprise environments that demand speed, security, and clarity. It streams logs in real time with sub-500ms latency, supports advanced search with a custom query language, and visualizes data through interactive, glassmorphism-inspired dashboards. Designed for multi-tenant use, Punkt enforces strict row-level security and supports chunked ingestion for massive log files. Its architecture combines a React/TypeScript frontend with a FastAPI backend, PostgreSQL for storage, and Redis for real-time features. Punkt empowers teams to monitor, debug, and analyze infrastructure with confidence and style.
 
+
 ### 4. BabbleClone (LingoVision)
+<p align="center">
+  <img src="../Screenshots/BabbelClone.png" alt="BabbleClone screenshot" width="500" style="border-radius:12px;box-shadow:0 2px 12px #0002;" />
+</p>
 
 **Solution Overview:**
 LingoVision (BabbleClone) is a language learning app that immerses users in Spanish vocabulary using images and native audio, eliminating the need for translation. Its unique "thinking gap" method and modern UI make language acquisition intuitive, engaging, and effective for learners of all ages.
