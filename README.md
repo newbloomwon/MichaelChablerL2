@@ -14,24 +14,34 @@ This monorepo is a showcase of advanced, production-grade projects spanning data
 ## Project Overviews
 
 ### 1. AI-Grid-Infrastructure
+
 **A real-time energy grid dashboard and analytics platform.**
-Visualizes and analyzes live data from ERCOT (Texas) and ISO-NE (New England) using a FastAPI backend and Streamlit dashboard. Features robust API integrations, real-time data pipelines, and a modular Python codebase for energy market research and operations.
+
+AI-Grid-Infrastructure delivers real-time energy grid data from ERCOT (Texas) and ISO-NE (New England), providing researchers, analysts, and operators with actionable insights. The platform features a FastAPI backend that ingests and serves live grid data, while a Streamlit dashboard offers intuitive, interactive visualizations. Designed for both rapid prototyping and production use, it supports robust API integrations, modular Python code, and future expansion for additional grids or analytics. The project emphasizes transparency, reliability, and ease of use for energy market professionals and enthusiasts.
 
 ### 2. BabbleClone (LingoVision)
+
 **A visual-first language learning MVP.**
-Immersive Spanish vocabulary lessons using images and audio, with no translation crutch. Features a modern React/Tailwind UI, audio-visual learning flow, and a Node.js/Express/Supabase backend. Designed for rapid, intuitive language acquisition.
+
+LingoVision (BabbleClone) reimagines language learning by immersing users in Spanish vocabulary lessons that rely solely on images and native audio—no translations, just pure context-driven understanding. The app’s "thinking gap" method encourages direct neural connections between concepts and words, making learning more natural and memorable. With a clean, modern UI, responsive design, and seamless audio-visual flow, users progress through lessons in a way that feels more like play than study. The backend, powered by Node.js and Supabase, ensures fast, secure access to lesson content, while the frontend delivers a delightful, distraction-free experience for learners of all ages.
 
 ### 3. punkt_project (Punkt)
+
 **A Splunk-inspired enterprise log analysis platform.**
-Real-time log aggregation, advanced search, and beautiful analytics dashboards. Built for multi-tenant environments with sub-500ms streaming, a custom query language, and a premium React/TypeScript UI. Backend powered by FastAPI, PostgreSQL, and Redis.
+
+Punkt is a next-generation log aggregation and analysis platform built for enterprise environments that demand speed, security, and clarity. It streams logs in real time with sub-500ms latency, supports advanced search with a custom query language, and visualizes data through interactive, glassmorphism-inspired dashboards. Designed for multi-tenant use, Punkt enforces strict row-level security and supports chunked ingestion for massive log files. Its architecture combines a React/TypeScript frontend with a FastAPI backend, PostgreSQL for storage, and Redis for real-time features. Punkt empowers teams to monitor, debug, and analyze infrastructure with confidence and style.
 
 ### 4. Discografy
+
 **A music discovery and curation platform.**
-Empowers human curators and discovery-hungry fans to find new artists before they go mainstream. Features a random discovery engine, curated "crates," and a business model focused on exclusivity and taste leadership. Built with vanilla JS, Electron, and Firebase.
+
+Discografy is built for true music lovers—those who crave discovery, not just background noise. Unlike algorithm-driven platforms, Discografy puts human curators at the center, letting genre experts and influencers share their taste and build loyal followings. Fans discover emerging artists through curated "crates" and a high-friction, intentional discovery engine that rewards active listening. The platform’s business model is rooted in exclusivity: artists can offer new releases first on Discografy for higher royalties, while curators drive organic growth by bringing their audiences. With a focus on taste leadership, community, and real music, Discografy aims to reshape how people find and value new sounds.
 
 ### 5. frodo (Ghost)
+
 **A privacy threat scanning tool for everyday users.**
-Alerts users to digital spaces where their personal information is at risk. Designed for non-technical users to reclaim their digital identity and reduce online exposure. Features a user-friendly interface and actionable privacy insights.
+
+Ghost (frodo) empowers everyday users to reclaim their digital identity by moving from total exposure to strategic invisibility. In a world where personal information is constantly at risk, Ghost scans digital spaces and alerts users to potential privacy threats—helping them understand where their data might be exposed or compromised. The tool is designed for non-technical audiences, providing clear, actionable insights and a user-friendly interface. Ghost’s mission is to make privacy protection accessible, proactive, and effective for anyone concerned about their online footprint.
 
 ---
 
