@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discografy - Music — not muzak!</title>
+    <!-- Link to the refined merged CSS file -->
+    <link rel="stylesheet" href="alt-rock-v2.css">
+</head>
+
+<body>
+
+    <div class="spotify-main-wrapper">
+
+        <!-- 1. HEADER/BANNER (The Cure Style Banner) -->
+        <div class="header-banner cure-header">
+            <button class="hide-announcements">Hide announcements</button>
+            <div class="brand-logo-inline">
+                <img src="discografy-logo.png" alt="Discografy Logo">
+            </div>
+            <div class="banner-content">
+                <div class="motto-cure scrawled">MUSIC — <span>NOT MUZAK!</span></div>
+                <div class="banner-text">
+                    <p class="scrawled">[CURRENT RELEASE]</p>
+                    <h1 class="scrawled" id="banner-artist-name">THUNDERCAT</h1>
+                    <p id="banner-track-title">I DID THIS TO MYSELF (FEAT. LIL YACHTY)</p>
+                </div>
+            </div>
+            <div class="elektra-logo">
+                <div class="turntable-plinth">
+                    <div class="record-platter">
+                        <span class="record-label"></span>
+                        <span class="record-shine"></span>
+                    </div>
+                    <div class="tonearm">
+                        <div class="tonearm-base"></div>
+                        <div class="tonearm-rod"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 2. NAVIGATION TABS -->
+        <div class="navigation-tabs">
+            <button class="nav-tab active" id="tab-music" onclick="switchTab('music')">Collection</button>
+            <button class="nav-tab" id="tab-live-now" onclick="switchTab('live-now')">Live</button>
+            <button class="nav-tab" id="tab-new-music" onclick="switchTab('new-music')">New Music</button>
+            <button class="nav-tab" id="tab-random" onclick="switchTab('random')">Random</button>
+        </div>
+
+        <!-- 3. MAIN CONTENT AREA -->
+        <div id="content-area">
+
+            <!-- MUSIC CONTENT -->
+            <div id="music-content">
+
+                <!-- Quick Picks Grid (2x3 Structure) -->
+                <div class="quick-picks-grid">
+                    <div class="quick-pick-item">
+                        <img src="https://picsum.photos/seed/quick1/70" alt="Quick Pick 1">
+                        <div class="quick-pick-item-title">Daily Mix 1 <span class="stars">***</span></div>
+                    </div>
+                    <div class="quick-pick-item">
+                        <img src="https://picsum.photos/seed/quick2/70" alt="Quick Pick 2">
+                        <div class="quick-pick-item-title">Daily Mix 2 <span class="symbols">🔫🔫🔫</span></div>
+                    </div>
+                    <div class="quick-pick-item">
+                        <img src="https://picsum.photos/seed/quick3/70" alt="Quick Pick 3">
+                        <div class="quick-pick-item-title">Bag</div>
+                    </div>
+                    <div class="quick-pick-item">
+                        <img src="https://picsum.photos/seed/quick4/70" alt="Quick Pick 4">
+                        <div class="quick-pick-item-title">Let God Sort Em Out</div>
+                    </div>
+                    <div class="quick-pick-item">
+                        <img src="https://picsum.photos/seed/quick5/70" alt="Quick Pick 5">
+                        <div class="quick-pick-item-title">Trophies</div>
+                    </div>
+                    <div class="quick-pick-item">
+                        <img src="https://picsum.photos/seed/quick6/70" alt="Quick Pick 6">
+                        <div class="quick-pick-item-title">Daily Mix 3</div>
+                    </div>
+                </div>
+
+                <!-- NEW: My Items Section (The Collector's Crate) -->
+                <div id="my-collection-section" style="display: none;">
+                    <div class="section-header">
+                        <h2>My Items <span class="badge scrawled">OWNED</span></h2>
+                        <p class="live-subtitle">Your physical-digital collection.</p>
+                    </div>
+                    <div id="user-collection-grid" class="scroll-row">
+                        <!-- Items bought by the user will appear here -->
+                    </div>
+                </div>
+
+                <!-- Row 1: Curated Crates (Human-Led) -->
+                <div class="section-header">
+                    <h2>Curated Crates</h2>
+                    <a href="#" class="show-all">Show all</a>
+                </div>
+                <div id="curated-crates-container">
+                    <!-- Experts Crates will be injected here -->
+                </div>
+                <!-- Row 2: Expert Curation (Previously static hits) -->
+                <div id="expert-crates-container">
+                    <!-- Additional crates will be injected here -->
+                </div>
+
+                <!-- Row 2: Top Hits (Moved or Removed in favor of Human-Led discovery) -->
+
+            </div>
+
+            <!-- NEW MUSIC CONTENT (Hidden by default) -->
+            <div id="new-music-content" style="display: none;">
+                <h2 class="section-head">PICK YOUR VIBE</h2>
+
+                <!-- Genre Selection Row (Matches Music Tab Style) -->
+                <div class="scroll-row" id="genre-scroll-row" style="margin-bottom: 30px;">
+                    <!-- Random -->
+                    <div class="recommendation-card genre-card active" data-genre="random">
+                        <div class="card-image-container">
+                            <img src="https://picsum.photos/seed/random/180" alt="Random">
+                            <span class="daily-mix-label">Mix</span>
+                            <span class="daily-mix-overlay">🎲</span>
+                        </div>
+                        <div class="card-title">Surprise Me</div>
+                        <div class="card-artists">Random Selection</div>
+                    </div>
+
+                    <!-- Indie -->
+                    <div class="recommendation-card genre-card" data-genre="indie">
+                        <div class="card-image-container">
+                            <img src="https://picsum.photos/seed/indie/180" alt="Indie">
+                            <div class="daily-mix-overlay">🎸</div>
+                        </div>
+                        <div class="card-title">Indie Rock</div>
+                        <div class="card-artists">Garage & Alt</div>
+                    </div>
+
+                    <!-- Hip Hop -->
+                    <div class="recommendation-card genre-card" data-genre="hiphop">
+                        <div class="card-image-container">
+                            <img src="https://picsum.photos/seed/hiphop/180" alt="Hip Hop">
+                            <div class="daily-mix-overlay">🎤</div>
+                        </div>
+                        <div class="card-title">Hip Hop</div>
+                        <div class="card-artists">Beats & Rhymes</div>
+                    </div>
+
+                    <!-- International -->
+                    <div class="recommendation-card genre-card" data-genre="world">
+                        <div class="card-image-container">
+                            <img src="https://picsum.photos/seed/world/180" alt="World">
+                            <span class="daily-mix-label">New</span>
+                            <div class="daily-mix-overlay">🌍</div>
+                        </div>
+                        <div class="card-title">International</div>
+                        <div class="card-artists">Global Sounds</div>
+                    </div>
+
+                    <!-- Electronic -->
+                    <div class="recommendation-card genre-card" data-genre="electronic">
+                        <div class="card-image-container">
+                            <img src="https://picsum.photos/seed/electro/180" alt="Electronic">
+                            <div class="daily-mix-overlay">🎹</div>
+                        </div>
+                        <div class="card-title">Electronic</div>
+                        <div class="card-artists">Synth & Bass</div>
+                    </div>
+
+                    <!-- Rock -->
+                    <div class="recommendation-card genre-card" data-genre="rock">
+                        <div class="card-image-container">
+                            <img src="https://picsum.photos/seed/rock/180" alt="Rock">
+                            <div class="daily-mix-overlay">🤘</div>
+                        </div>
+                        <div class="card-title">Pure Rock</div>
+                        <div class="card-artists">Distortion Only</div>
+                    </div>
+                </div>
+
+                <div class="discovery-container" style="padding: 20px; text-align: center;">
+
+                    <button id="btn-discover" class="btn-cure secondary" style="font-size: 1.2rem; padding: 15px 30px;">
+                        🎲 DISCOVER NEW TRACK
+                    </button>
+
+                    <!-- Container for the result -->
+                    <div id="discovery-result" style="display: none; margin-top: 40px;">
+                        <h3 style="text-align:left; color:white; margin-bottom:10px;">Your Discovery:</h3>
+                        <div class="recommendation-card featured"
+                            style="margin: 0 auto; max-width: 400px; transform: none;">
+                            <div class="card-image-container">
+                                <img id="discovery-img" src="" alt="Album Art">
+                                <div class="daily-mix-overlay">▶</div>
+                            </div>
+                            <div class="card-title" id="discovery-title">Track Title</div>
+                            <div class="card-artists" id="discovery-artist">Artist Name</div>
+                            <div style="margin-top: 10px; color: gold; font-size: 0.9rem;" id="discovery-genre">Genre
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- LIVE MUSIC CONTENT (Hidden by default) -->
+            <div id="live-now-content" style="display: none;">
+                <div class="section-header">
+                    <h2 class="scrawled">Live Musician Streams</h2>
+                    <p class="live-subtitle">Direct from the basement to your screen.</p>
+                </div>
+
+                <div class="live-now-grid">
+                    <!-- Live Card 1: Independent Artist -->
+                    <div class="live-card">
+                        <div class="live-stream-container">
+                            <img src="https://picsum.photos/seed/artist1/400/225" alt="Artist 1">
+                            <div class="live-overlay">
+                                <span class="live-indicator">LIVE</span>
+                                <span class="viewer-count">1.2K watching</span>
+                            </div>
+                        </div>
+                        <div class="live-card-meta">
+                            <div class="artist-avatar"><img src="https://picsum.photos/seed/av1/50" alt=""></div>
+                            <div class="live-details">
+                                <h3>Sofa King Cold - "Basement Sessions"</h3>
+                                <p>Experimental Lo-fi from Seattle</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Live Card 2: Concert -->
+                    <div class="live-card">
+                        <div class="live-stream-container">
+                            <img src="https://picsum.photos/seed/artist2/400/225" alt="Artist 2">
+                            <div class="live-overlay">
+                                <span class="live-indicator">LIVE</span>
+                                <span class="viewer-count">850 watching</span>
+                            </div>
+                        </div>
+                        <div class="live-card-meta">
+                            <div class="artist-avatar"><img src="https://picsum.photos/seed/av2/50" alt=""></div>
+                            <div class="live-details">
+                                <h3>The Ghost Notes - Live at The Void</h3>
+                                <p>Post-Punk Revival</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Live Card 3: Festival -->
+                    <div class="live-card">
+                        <div class="live-stream-container">
+                            <img src="https://picsum.photos/seed/festival1/400/225" alt="Festival">
+                            <div class="live-overlay">
+                                <span class="live-indicator">LIVE</span>
+                                <span class="viewer-count">25.4K watching</span>
+                            </div>
+                        </div>
+                        <div class="live-card-meta">
+                            <div class="artist-avatar"><img src="https://picsum.photos/seed/fav/50" alt=""></div>
+                            <div class="live-details">
+                                <h3>VOID-FEST Day 2 - Stage A</h3>
+                                <p>Multi-cam Festival Stream</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Live Card 4: Studio -->
+                    <div class="live-card">
+                        <div class="live-stream-container">
+                            <img src="https://picsum.photos/seed/studio/400/225" alt="Studio">
+                            <div class="live-overlay">
+                                <span class="live-indicator">LIVE</span>
+                                <span class="viewer-count">420 watching</span>
+                            </div>
+                        </div>
+                        <div class="live-card-meta">
+                            <div class="artist-avatar"><img src="https://picsum.photos/seed/sav/50" alt=""></div>
+                            <div class="live-details">
+                                <h3>Bleak & Blue - Tracking Vocals</h3>
+                                <p>Live Production Stream</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Live Card 5: Upcoming -->
+                    <div class="live-card upcoming">
+                        <div class="live-stream-container">
+                            <img src="https://picsum.photos/seed/djset/400/225" alt="DJ Set">
+                            <div class="live-overlay">
+                                <span class="upcoming-tag">Scheduled 11PM</span>
+                            </div>
+                        </div>
+                        <div class="live-card-meta">
+                            <div class="artist-avatar"><img src="https://picsum.photos/seed/djav/50" alt=""></div>
+                            <div class="live-details">
+                                <h3>Neon Ghoul - Sunset Rooftop Set</h3>
+                                <p>Deep Minimal Techno</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- NEW MUSIC CONTENT (Replaced with new-music-content above) -->
+
+            <!-- RANDOM DISCOVERY CONTENT (Developer C - Main Focus) -->
+            <div id="random-content" style="display: none;">
+                <div class="section-header discovery-header">
+                    <h2 class="scrawled">Random Discovery</h2>
+                    <p class="algorithm-cta">Let the algorithm find your next favorite.</p>
+                </div>
+                <div id="random-discovery-container">
+                    <!-- Random tracks will be injected here by the algorithm -->
+                    <div class="loading-state"
+                        style="color: var(--marquee-cyan); font-family: var(--font-mono); padding: 2rem;">
+                        Initializing shuffle engine...
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <!-- 4. FIXED MUSIC PLAYER (Cassette Deck Aesthetic) -->
+    <div id="music-player" class="deck-bar">
+        <div class="player-info">
+            <img src="https://picsum.photos/seed/player/54" alt="Track Art" class="player-art">
+            <div class="player-track-meta">
+                <div class="track-title">I DID THIS TO MYSELF</div>
+                <div class="track-artists">Thundercat, Lil Yachty</div>
+            </div>
+        </div>
+
+        <div class="player-controls-container">
+            <div class="player-controls">
+                <button title="Shuffle">🔀</button>
+                <button title="Previous">⏮️</button>
+                <button class="play-button" id="play-pause-btn" title="Play">▶️</button>
+                <button title="Next">⏭️</button>
+                <button title="Repeat">🔁</button>
+            </div>
+            <div class="player-seek-bar">
+                <span class="seek-bar-time" id="current-time">0:00</span>
+                <div class="seek-bar-track" id="seek-bar-track">
+                    <div class="seek-bar-progress" id="seek-bar-progress"></div>
+                </div>
+                <span class="seek-bar-time" id="duration">3:00</span>
+            </div>
+        </div>
+
+        <div class="player-volume">
+            <span class="icon-small">🔊</span>
+            <div class="seek-bar-track volume-bar-track">
+                <div class="seek-bar-progress" style="width: 80%;"></div>
+            </div>
+        </div>
+
+        <audio id="audio-player" src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"
+            preload="metadata"></audio>
+    </div>
+
+    <!-- Firebase SDKs (Commented out - not needed for basic functionality) -->
+    <!-- Uncomment these if you want to enable Firebase features -->
+    <!--
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+    <script src="firebase-config.js"></script>
+    -->
+
+    <!-- Our Backend Logic -->
+    <script src="discovery-service.js"></script>
+    <script src="alt-rock-v2.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify Clone: New User's Homepage</title>
+    <!-- Link to the external CSS file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="spotify-main-wrapper">
+
+        <!-- 1. HEADER/BANNER -->
+        <div class="header-banner">
+            <button class="hide-announcements">Hide announcements</button>
+
+            <!-- Using a general placeholder image for the main artist -->
+            <img src="https://picsum.photos/seed/thundercat/300/300" alt="Thundercat Placeholder" class="thundercat-image">
+
+            <div class="banner-content">
+                <div class="banner-text">
+                    <p>Album Single</p>
+                    <h1>THUNDERCAT</h1>
+                    <p>I DID THIS TO MYSELF (FEAT. LIL YACHTY)</p>
+                    <div class="banner-listen-on">
+                        LISTEN ON
+                        <!-- Spotify Icon SVG Placeholder -->
+                        <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M12.022 0c6.636 0 12.022 5.385 12.022 12.022S18.658 24.044 12.022 24.044C5.385 24.044 0 18.658 0 12.022 0 5.385 5.385 0 12.022 0zm5.118 17.584c-.212-.346-.667-.45-1.026-.239-2.27 1.4-5.117 1.624-7.85 0-1.74-1.036-2.584-3.238-2.584-5.32 0-3.953 2.76-7.07 7.042-7.07 1.55 0 3.018.528 4.258 1.528.318.25.753.21 1.033-.11.28-.32.222-.796-.1-.99-1.464-1.21-3.32-1.85-5.228-1.85-4.832 0-8.61 3.5-8.61 8.61 0 2.45.85 4.6 2.58 6.012 2.872 1.93 6.643 1.94 9.53 0 .346-.223.77-.123.99.239.22.346.12.784-.22 1.018zM12.022 2.78c-5.176 0-9.25 3.99-9.25 9.25 0 5.26 4.074 9.25 9.25 9.25 5.174 0 9.25-3.99 9.25-9.25 0-5.26-4.076-9.25-9.25-9.25z"></path></svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 2. NAVIGATION TABS -->
+        <div class="navigation-tabs">
+            <button class="nav-tab active" id="tab-music" onclick="switchTab('music')">Music</button>
+            <button class="nav-tab" id="tab-live-now" onclick="switchTab('live-now')">Live Now</button>
+        </div>
+
+        <!-- 3. MAIN CONTENT AREA (Dynamically switches) -->
+        <div id="content-area">
+
+            <!-- MUSIC HOMEPAGE CONTENT (Initial View) -->
+            <div id="music-content">
+                <!-- Quick Picks Grid -->
+                <div class="quick-picks-grid">
+                    <div class="quick-pick-item">
+                        <img src="https://picsum.photos/seed/quick1/70" alt="Quick Pick 1">
+                        <div class="quick-pick-item-title">Daily Mix 1 <span style="color: gold;">***</span></div>
+                    </div>
+                    <div class="quick-pick-item">
+                        <img src="https://picsum.photos/seed/quick2/70" alt="Quick Pick 2">
+                        <div class="quick-pick-item-title">Daily Mix 2 <span style="color: #1db954;">🔫🔫🔫</span></div>
+                    </div>
+                    <div class="quick-pick-item">
+                        <img src="https://picsum.photos/seed/quick3/70" alt="Quick Pick 3">
+                        <div class="quick-pick-item-title">Bag</div>
+                    </div>
+                    <div class="quick-pick-item">
+                        <img src="https://picsum.photos/seed/quick4/70" alt="Quick Pick 4">
+                        <div class="quick-pick-item-title">Let God Sort Em Out</div>
+                    </div>
+                    <div class="quick-pick-item">
+                        <img src="https://picsum.photos/seed/quick5/70" alt="Quick Pick 5">
+                        <div class="quick-pick-item-title">Trophies</div>
+                    </div>
+                    <div class="quick-pick-item">
+                        <img src="https://picsum.photos/seed/quick6/70" alt="Quick Pick 6">
+                        <div class="quick-pick-item-title">Daily Mix 3</div>
+                    </div>
+                </div>
+
+                <!-- Recommendation Rows (Including the 4-5 extra rows requested) -->
+
+                <!-- Row 1: Made For New User (Original with User Change) -->
+                <div class="section-header">
+                    <h2>Made For<br>New User</h2>
+                    <a href="#" class="show-all">Show all</a>
+                </div>
+                <div class="scroll-row">
+                    <!-- Daily Mix 02 (Now 02) -->
+                    <div class="recommendation-card">
+                        <div class="card-image-container">
+                            <img src="https://picsum.photos/seed/dailymix2/180" alt="Daily Mix 2">
+                            <span class="daily-mix-label">Daily Mix</span>
+                            <span class="daily-mix-overlay">02</span>
+                        </div>
+                        <div class="card-title">Daily Mix 2</div>
+                        <div class="card-artists">Drake, Eminem, Lyrical Lemonade and...</div>
+                    </div>
+                    <!-- Daily Mix 03 (Now 03) -->
+                    <div class="recommendation-card">
+                        <div class="card-image-container">
+                            <img src="https://picsum.photos/seed/dailymix3/180" alt="Daily Mix 3">
+                            <span class="daily-mix-label">Daily Mix</span>
+                            <span class="daily-mix-overlay">03</span>
+                        </div>
+                        <div class="card-title">Daily Mix 3</div>
+                        <div class="card-artists">Pop Smoke, MaxThaDemon, Bizz...</div>
+                    </div>
+                    <!-- Daily Mix 04 (Now 04) -->
+                    <div class="recommendation-card">
+                        <div class="card-image-container">
+                            <img src="https://picsum.photos/seed/dailymix4/180" alt="Daily Mix 4">
+                            <span class="daily-mix-label">Daily Mix</span>
+                            <span class="daily-mix-overlay">04</span>
+                        </div>
+                        <div class="card-title">Daily Mix 4</div>
+                        <div class="card-artists">Jack Wall, Masashi Hamauzu, Azumi...</div>
+                    </div>
+                    <!-- Daily Mix 05 (Now 05) -->
+                    <div class="recommendation-card">
+                        <div class="card-image-container">
+                            <img src="https://picsum.photos/seed/dailymix5/180" alt="Daily Mix 5">
+                            <span class="daily-mix-label">Daily Mix</span>
+                            <span class="daily-mix-overlay">05</span>
+                        </div>
+                        <div class="card-title">Daily Mix 5</div>
+                        <div class="card-artists">A Boogie Wit da Hoodie, Quality...</div>
+                    </div>
+                    <!-- Extra placeholder card 1 -->
+                    <div class="recommendation-card">
+                        <div class="card-image-container">
+                            <img src="https://picsum.photos/seed/extra1/180" alt="Playlist">
+                            <span class="daily-mix-label" style="background-color: #502758;">Playlist</span>
+                            <span class="daily-mix-overlay" style="color: #502758;">🎧</span>
+                        </div>
+                        <div class="card-title">Chill Vibes</div>
+                        <div class="card-artists">Lofi beats to relax/study to...</div>
+                    </div>
+                    <!-- Extra placeholder card 2 -->
+                    <div class="recommendation-card">
+                        <div class="card-image-container">
+                            <img src="https://picsum.photos/seed/extra2/180" alt="Album">
+                            <span class="daily-mix-label" style="background-color: #3b740d;">Album</span>
+                            <span class="daily-mix-overlay" style="color: #3b740d;">💿</span>
+                        </div>
+                        <div class="card-title">Epic Gaming Soundtracks</div>
+                        <div class="card-artists">Two Steps From Hell, Hans Zimmer...</div>
+                    </div>
+                </div>
+
+                <!-- Row 2: Top Hits Right Now (Extra Row 1) -->
+                <div class="section-header">
+                    <h2>Top Hits Right Now</h2>
+                    <a href="#" class="show-all">Show all</a>
+                </div>
+                <div class="scroll-row">
+                    <div class="recommendation-card"><div class="card-image-container"><img src="https://picsum.photos/seed/hits1/180" alt="Hit 1"></div><div class="card-title">Pop Central</div><div class="card-artists">Taylor Swift, Ed Sheeran, Dua Lipa</div></div>
+                    <div class="recommendation-card"><div class="card-image-container"><img src="https://picsum.photos/seed/hits2/180" alt="Hit 2"></div><div class="card-title">RapCaviar</div><div class="card-artists">Kendrick Lamar, J. Cole, Travis Scott</div></div>
+                    <div class="recommendation-card"><div class="card-image-container"><img src="https://picsum.photos/seed/hits3/180" alt="Hit 3"></div><div class="card-title">Viral Hits</div><div class="card-artists">Songs trending on TikTok and more</div></div>
+                    <div class="recommendation-card"><div class="card-image-container"><img src="https://picsum.photos/seed/hits4/180" alt="Hit 4"></div><div class="card-title">Rock Anthems</div><div class="card-artists">Foo Fighters, AC/DC, Queen</div></div>
+                    <div class="recommendation-card"><div class="card-image-container"><img src="https://picsum.photos/seed/hits5/180" alt="Hit 5"></div><div class="card-title">K-Pop Daebak</div><div class="card-artists">BTS, BLACKPINK, NewJeans</div></div>
+                    <div class="recommendation-card"><div class="card-image-container"><img src="https://picsum.photos/seed/hits6/180" alt="Hit 6"></div><div class="card-title">Indie Mix</div><div class="card-artists">The 1975, Arctic Monkeys</div></div>
+                </div>
+
+                <!-- Row 3: Your Workout Mix (Extra Row 2) -->
+                <div class="section-header">
+                    <h2>Pump Up The Jam</h2>
+                    <a href="#" class="show-all">Show all</a>
+                </div>
+                <div class="scroll-row">
+                    <div class="recommendation-card"><div class="card-image-container"><img src="https://picsum.photos/seed/workout1/180" alt="Workout 1"></div><div class="card-title">Hype Hip-Hop</div><div class="card-artists">Cardio, Weights, Max Intensity</div></div>
+                    <div class="recommendation-card"><div class="card-image-container"><img src="https://picsum.photos/seed/workout2/180" alt="Workout 2"></div><div class="card-title">Electronic Workout</div><div class="card-artists">High BPM, EDM, Dubstep</div></div>
+                    <div class="recommendation-card"><div class="card-image-container"><img src="https://picsum.photos/seed/workout3/180" alt="Workout 3"></div><div class="card-title">80s Training Montage</div><div class="card-artists">Survivor, Bon Jovi, Kenny Loggins</div></div>
+                    <div class="recommendation-card"><div class="card-image-container"><img src="https://picsum.photos/seed/workout4/180" alt="Workout 4"></div><div class="card-title">Metalocalypse</div><div class="card-artists">Slayer, Metallica, Gojira</div></div>
+                    <div class="recommendation-card"><div class="card-image-container"><img src="https://picsum.photos/seed/workout5/180" alt="Workout 5"></div><div class="card-title">Power Yoga</div><div class="card-artists">Ambient, Focus, Slow Burn</div></div>
+                    <div class="recommendation-card"><div class="card-image-container"><img src="https://picsum.photos/seed/workout6/180" alt="Workout 6"></div><div class="card-title">Latin Aerobics</div><div class="card-artists">Reggaeton, Salsa, Merengue</div></div>
+                </div>
+
+                 <!-- Row 4: Recently Added (Extra Row 3) -->
+                <div class="section-header">
+                    <h2>Recently Added</h2>
+                    <a href="#" class="show-all">Show all</a>
+                </div>
+                <div class="scroll-row">
+                    <div class="recommendation-card"><div class="card-image-container"><img src="https://picsum.photos/seed/new1/180" alt="New 1"></div><div class="card-title">New Releases for You</div><div class="card-artists">Updated Weekly</div></div>
+                    <div class="recommendation-card"><div class="card-image-container"><img src="https://picsum.photos/seed/new2/180" alt="New 2"></div><div class="card-title">The Daily</div><div class="card-artists">Podcast</div></div>
+                    <div class="recommendation-card"><div class="card-image-container"><img src="https://picsum.photos/seed/new3/180" alt="New 3"></div><div class="card-title">Artist Radio: New User</div><div class="card-artists">Non-stop music from New User & similar</div></div>
+                    <div class="recommendation-card"><div class="card-image-container"><img src="https://picsum.photos/seed/new4/180" alt="New 4"></div><div class="card-title">Deep Focus</div><div class="card-artists">Instrumental music for concentration</div></div>
+                    <div class="recommendation-card"><div class="card-image-container"><img src="https://picsum.photos/seed/new5/180" alt="New 5"></div><div class="card-title">This Is: Lyrical Lemonade</div><div class="card-artists">The best of the Lyrical Lemonade crew</div></div>
+                    <div class="recommendation-card"><div class="card-image-container"><img src="https://picsum.photos/seed/new6/180" alt="New 6"></div><div class="card-title">Discover Weekly</div><div class="card-artists">Your weekly mixtape of fresh music.</div></div>
+                </div>
+
+                 <!-- Row 5: Throwbacks (Extra Row 4) -->
+                <div class="section-header">
+                    <h2>Throwback Tracks</h2>
+                    <a href="#" class="show-all">Show all</a>
+                </div>
+                <div class="scroll-row">
+                    <div class="recommendation-card"><div class="card-image-container"><img src="https://picsum.photos/seed/throwback1/180" alt="Throwback 1"></div><div class="card-title">90s Hip Hop Classics</div><div class="card-artists">Tupac, Biggie, Wu-Tang Clan</div></div>
+                    <div class="recommendation-card"><div class="card-image-container"><img src="https://picsum.photos/seed/throwback2/180" alt="Throwback 2"></div><div class="card-title">Early 2000s Pop</div><div class="card-artists">Britney Spears, Nelly, Destiny's Child</div></div>
+                    <div class="recommendation-card"><div class="card-image-container"><img src="https://picsum.photos/seed/throwback3/180" alt="Throwback 3"></div><div class="card-title">Retro Wave</div><div class="card-artists">Synthwave, 80s aesthetics</div></div>
+                    <div class="recommendation-card"><div class="card-image-container"><img src="https://picsum.photos/seed/throwback4/180" alt="Throwback 4"></div><div class="card-title">Classic Rock</div><div class="card-artists">Led Zeppelin, Pink Floyd, The Doors</div></div>
+                    <div class="recommendation-card"><div class="card-image-container"><img src="https://picsum.photos/seed/throwback5/180" alt="Throwback 5"></div><div class="card-title">Disco Fever</div><div class="card-artists">Bee Gees, ABBA, Donna Summer</div></div>
+                    <div class="recommendation-card"><div class="card-image-container"><img src="https://picsum.photos/seed/throwback6/180" alt="Throwback 6"></div><div class="card-title">90s R&B</div><div class="card-artists">Usher, TLC, Boyz II Men</div></div>
+                </div>
+
+                <!-- Row 6: Albums (Extra Row 5) -->
+                <div class="section-header">
+                    <h2>Recent Albums</h2>
+                    <a href="#" class="show-all">Show all</a>
+                </div>
+                <div class="scroll-row">
+                    <div class="recommendation-card"><div class="card-image-container"><img src="https://picsum.photos/seed/albumX/180" alt="Album 1"></div><div class="card-title">Album X</div><div class="card-artists">The Unknown Artist</div></div>
+                    <div class="recommendation-card"><div class="card-image-container"><img src="https://picsum.photos/seed/albumY/180" alt="Album 2"></div><div class="card-title">The Remixes</div><div class="card-artists">Various Artists</div></div>
+                    <div class="recommendation-card"><div class="card-image-container"><img src="https://picsum.photos/seed/albumZ/180" alt="Album 3"></div><div class="card-title">In Flux</div><div class="card-artists">The New Wave</div></div>
+                    <div class="recommendation-card"><div class="card-image-container"><img src="https://picsum.photos/seed/albumA/180" alt="Album 4"></div><div class="card-title">Title Forth</div><div class="card-artists">Indie Starlet</div></div>
+                    <div class="recommendation-card"><div class="card-image-container"><img src="https://picsum.photos/seed/albumB/180" alt="Album 5"></div><div class="card-title">Greatest Hits</div><div class="card-artists">Legendary Band</div></div>
+                    <div class="recommendation-card"><div class="card-image-container"><img src="https://picsum.photos/seed/albumC/180" alt="Album 6"></div><div class="card-title">Mixtape Vol. 1</div><div class="card-artists">Underground Rapper</div></div>
+                </div>
+            </div>
+
+            <!-- LIVE NOW CONTENT (Hidden by default) -->
+            <div id="live-now-content" style="display: none;">
+                <h2 style="margin-top: 20px;">Live Concerts & Artist Streams</h2>
+                <p style="color: var(--secondary-text-color); margin-bottom: 20px;">See what's live right now or coming up soon.</p>
+                <div class="live-now-grid">
+                    <!-- Live Card 1 (In Progress) -->
+                    <div class="live-card">
+                        <div class="live-video-placeholder">
+                            <span class="live-tag">Live Now</span>
+                            <span class="icon">▶️</span>
+                        </div>
+                        <div class="live-info">
+                            <h3>**The Weekend's** After Hours Global Tour</h3>
+                            <p>Tonight's sold-out show, streaming live from London.</p>
+                            <p style="font-size: 0.8rem; color: var(--spotify-green);">LIVE 1:35:12</p>
+                        </div>
+                    </div>
+
+                    <!-- Live Card 2 (Coming Soon) -->
+                    <div class="live-card">
+                        <div class="live-video-placeholder" style="background-color: #4b361a; color: #f9d857;">
+                            <span class="live-tag" style="background-color: #f9d857; color: #4b361a; animation: none;">Starting Soon</span>
+                            <span style="font-size: 1.5rem; color: white;">🕒 10 MIN</span>
+                        </div>
+                        <div class="live-info">
+                            <h3>**Doja Cat** New Album Listening Party</h3>
+                            <p>Exclusive pre-release party with Q&A.</p>
+                            <p style="font-size: 0.8rem; color: var(--secondary-text-color);">Starts in 10 minutes</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Live Card 3 (Past Stream/On Demand) -->
+                    <div class="live-card">
+                        <div class="live-video-placeholder" style="background-color: #2b3955; color: #6495ed;">
+                             <span class="live-tag" style="background-color: #6495ed; color: #2b3955; animation: none;">On Demand</span>
+                            <span class="icon">▶️</span>
+                        </div>
+                        <div class="live-info">
+                            <h3>**The Last Of Us** Composer: Live Q&A</h3>
+                            <p>Jack Wall discussing his legendary scores (VOD).</p>
+                            <p style="font-size: 0.8rem; color: var(--secondary-text-color);">4.5K viewers watched live</p>
+                        </div>
+                    </div>
+
+                    <!-- Live Card 4 (Future Event) -->
+                    <div class="live-card">
+                        <div class="live-video-placeholder" style="background-color: #552b2b; color: #ff6347;">
+                            <span class="live-tag" style="background-color: #ff6347; color: #552b2b; animation: none;">Scheduled</span>
+                            <span style="font-size: 1.5rem; color: white;">🗓️ OCT 28</span>
+                        </div>
+                        <div class="live-info">
+                            <h3>**Eminem** Birthday Special Rarity Stream</h3>
+                            <p>A collection of rare clips and unreleased songs.</p>
+                            <p style="font-size: 0.8rem; color: var(--secondary-text-color);">Scheduled: Oct 28, 8:00 PM EST</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- 4. FIXED MUSIC PLAYER -->
+    <div id="music-player">
+        <div class="player-info">
+            <img src="https://picsum.photos/seed/player/54" alt="Track Art" style="width: 54px; height: 54px; border-radius: 4px; margin-right: 12px;">
+            <div>
+                <div style="font-weight: 600; font-size: 0.9rem;">I DID THIS TO MYSELF</div>
+                <div style="color: var(--secondary-text-color); font-size: 0.75rem;">Thundercat, Lil Yachty</div>
+            </div>
+        </div>
+
+        <div class="player-controls-container">
+            <div class="player-controls">
+                <button title="Shuffle"><span class="icon-small">🔀</span></button>
+                <button title="Previous"><span class="icon">⏮️</span></button>
+                <button class="play-button" id="play-pause-btn" title="Play"><span class="icon">▶️</span></button>
+                <button title="Next"><span class="icon">⏭️</span></button>
+                <button title="Repeat"><span class="icon-small">🔁</span></button>
+            </div>
+            <div class="player-seek-bar">
+                <span class="seek-bar-time" id="current-time">0:00</span>
+                <div class="seek-bar-track" id="seek-bar-track">
+                    <div class="seek-bar-progress" id="seek-bar-progress"></div>
+                </div>
+                <span class="seek-bar-time" id="duration">3:00</span>
+            </div>
+        </div>
+
+        <div class="player-volume">
+            <span class="icon-small" style="margin-right: 8px;">🔊</span>
+            <div class="seek-bar-track volume-bar-track">
+                <div class="seek-bar-progress" style="width: 80%; background-color: var(--spotify-green);"></div>
+            </div>
+        </div>
+
+        <!-- The actual audio element for testing (sourced from a public domain MP3) -->
+        <audio id="audio-player" src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" preload="metadata"></audio>
+    </div>
+
+    <!-- Link to the external JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>

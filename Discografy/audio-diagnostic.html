@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quick Audio Fix Test</title>
+    <style>
+        body {
+            font-family: 'Courier New', monospace;
+            background: #000;
+            color: #0f0;
+            padding: 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            color: #0ff;
+        }
+
+        button {
+            padding: 1rem 2rem;
+            font-size: 1.2rem;
+            margin: 1rem 0.5rem;
+            cursor: pointer;
+            background: #0f0;
+            border: none;
+            color: #000;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background: #0ff;
+        }
+
+        #status {
+            margin-top: 2rem;
+            padding: 1rem;
+            background: #111;
+            border: 2px solid #0f0;
+            max-height: 400px;
+            overflow-y: auto;
+        }
+
+        .error {
+            color: #f00;
+        }
+
+        .success {
+            color: #0f0;
+        }
+
+        .info {
+            color: #0ff;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>🎵 Audio Playback Diagnostic</h1>
+
+    <p>Click each button in order to diagnose the issue:</p>
+
+    <button onclick="test1()">1️⃣ Test SoundHelix URL</button>
+    <button onclick="test2()">2️⃣ Test Alternative URL</button>
+    <button onclick="test3()">3️⃣ Test With User Interaction</button>
+    <button onclick="clearLog()">🗑️ Clear Log</button>
+
+    <div id="status">
+        <p class="info">Ready to test. Click button 1 to start.</p>
+    </div>
+
+    <audio id="test-audio" preload="metadata"></audio>
+
+    <script>
+        const audio = document.getElementById('test-audio');
+        const status = document.getElementById('status');
+
+        function log(msg, type = 'info') {
+            console.log(msg);
+            const p = document.createElement('p');
+            p.className = type;
+            p.textContent = `[${new Date().toLocaleTimeString()}] ${msg}`;
+            status.appendChild(p);
+            status.scrollTop = status.scrollHeight;
+        }
+
+        function clearLog() {
+            status.innerHTML = '<p class="info">Log cleared. Ready for new test.</p>';
+        }
+
+        // Test 1: Original SoundHelix URL
+        function test1() {
+            log('🧪 TEST 1: SoundHelix URL', 'info');
+            const url = 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3';
+            testAudioURL(url);
+        }
+
+        // Test 2: Alternative free audio URL
+        function test2() {
+            log('🧪 TEST 2: Alternative URL (file-examples.com)', 'info');
+            const url = 'https://file-examples.com/storage/fe783a46f66f0b69e8e2a7c/2017/11/file_example_MP3_700KB.mp3';
+            testAudioURL(url);
+        }
+
+        // Test 3: With explicit user interaction
+        function test3() {
+            log('🧪 TEST 3: With User Interaction', 'info');
+            log('Setting up audio with user gesture...', 'info');
+
+            audio.src = 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3';
+            audio.load();
+
+            setTimeout(() => {
+                audio.play()
+                    .then(() => {
+                        log('✅ SUCCESS! Audio is playing with user interaction.', 'success');
+                        log('This means your browser REQUIRES user interaction before playing audio.', 'info');
+                        log('SOLUTION: In your main app, users must click a track THEN click the play button.', 'info');
+                    })
+                    .catch(err => {
+                        log(`❌ FAILED: ${err.message}`, 'error');
+                        log('This indicates a deeper issue. Check browser console for details.', 'error');
+                    });
+            }, 500);
+        }
+
+        function testAudioURL(url) {
+            log(`Testing URL: ${url}`, 'info');
+
+            // Reset audio
+            audio.pause();
+            audio.currentTime = 0;
+            audio.src = url;
+
+            // Check if URL is accessible
+            fetch(url, { method: 'HEAD' })
+                .then(response => {
+                    if (response.ok) {
+                        log(`✅ URL is accessible (Status: ${response.status})`, 'success');
+                        log(`Content-Type: ${response.headers.get('content-type')}`, 'info');
+
+                        // Try to play
+                        const playPromise = audio.play();
+
+                        if (playPromise !== undefined) {
+                            playPromise
+                                .then(() => {
+                                    log('✅ AUDIO IS PLAYING!', 'success');
+                                    log(`Duration: ${audio.duration.toFixed(2)}s`, 'info');
+                                    setTimeout(() => {
+                                        audio.pause();
+                                        log('⏸️ Paused for next test', 'info');
+                                    }, 3000);
+                                })
+                                .catch(error => {
+                                    log(`❌ Playback blocked: ${error.name}`, 'error');
+                                    log(`Reason: ${error.message}`, 'error');
+
+                                    if (error.name === 'NotAllowedError') {
+                                        log('⚠️ BROWSER AUTOPLAY POLICY BLOCKING AUDIO', 'error');
+                                        log('SOLUTION: User must interact with page first (click a button)', 'info');
+                                    }
+                                });
+                        }
+                    } else {
+                        log(`❌ URL returned status ${response.status}`, 'error');
+                    }
+                })
+                .catch(err => {
+                    log(`❌ Network error: ${err.message}`, 'error');
+                    log('The audio URL may be blocked by CORS or unreachable', 'error');
+                });
+        }
+
+        // Audio event listeners
+        audio.addEventListener('loadstart', () => log('📥 Loading audio...', 'info'));
+        audio.addEventListener('loadedmetadata', () => log('📊 Metadata loaded', 'success'));
+        audio.addEventListener('canplay', () => log('✅ Audio ready to play', 'success'));
+        audio.addEventListener('playing', () => log('▶️ Playback started', 'success'));
+        audio.addEventListener('pause', () => log('⏸️ Playback paused', 'info'));
+        audio.addEventListener('ended', () => log('⏹️ Playback ended', 'info'));
+        audio.addEventListener('error', (e) => {
+            const errorMessages = {
+                1: 'MEDIA_ERR_ABORTED: Playback aborted',
+                2: 'MEDIA_ERR_NETWORK: Network error',
+                3: 'MEDIA_ERR_DECODE: Decoding error',
+                4: 'MEDIA_ERR_SRC_NOT_SUPPORTED: Source not supported'
+            };
+            log(`❌ Audio Error: ${errorMessages[audio.error.code] || 'Unknown error'}`, 'error');
+        });
+
+        log('Diagnostic tool loaded. Click Test 1 to begin.', 'success');
+    </script>
+</body>
+
+</html>

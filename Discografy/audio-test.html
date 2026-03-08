@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio Test</title>
+    <style>
+        body {
+            font-family: monospace;
+            background: #000;
+            color: #0f0;
+            padding: 2rem;
+        }
+
+        button {
+            padding: 1rem 2rem;
+            font-size: 1.2rem;
+            margin: 1rem;
+            cursor: pointer;
+        }
+
+        #status {
+            margin-top: 2rem;
+            padding: 1rem;
+            background: #111;
+            border: 1px solid #0f0;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>🎵 Audio Playback Test</h1>
+
+    <button onclick="testAudio()">▶️ Test Audio Playback</button>
+    <button onclick="checkAudioElement()">🔍 Check Audio Element</button>
+
+    <div id="status">
+        <p>Status: Ready</p>
+    </div>
+
+    <audio id="test-audio" src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"
+        preload="metadata"></audio>
+
+    <script>
+        const audio = document.getElementById('test-audio');
+        const status = document.getElementById('status');
+
+        function log(msg) {
+            console.log(msg);
+            status.innerHTML += `<p>${msg}</p>`;
+        }
+
+        function testAudio() {
+            log('🎬 Attempting to play audio...');
+            log(`Audio src: ${audio.src}`);
+            log(`Audio readyState: ${audio.readyState}`);
+
+            const playPromise = audio.play();
+
+            if (playPromise !== undefined) {
+                playPromise
+                    .then(() => {
+                        log('✅ SUCCESS: Audio is playing!');
+                        log(`Current time: ${audio.currentTime}`);
+                        log(`Duration: ${audio.duration}`);
+                    })
+                    .catch(error => {
+                        log(`❌ ERROR: ${error.name} - ${error.message}`);
+                        log('This is likely a browser autoplay restriction.');
+                        log('Try clicking the play button again after user interaction.');
+                    });
+            }
+        }
+
+        function checkAudioElement() {
+            log('🔍 Audio Element Info:');
+            log(`- Source: ${audio.src}`);
+            log(`- Ready State: ${audio.readyState} (4 = HAVE_ENOUGH_DATA)`);
+            log(`- Paused: ${audio.paused}`);
+            log(`- Duration: ${audio.duration}`);
+            log(`- Current Time: ${audio.currentTime}`);
+            log(`- Volume: ${audio.volume}`);
+            log(`- Muted: ${audio.muted}`);
+        }
+
+        // Listen for audio events
+        audio.addEventListener('loadedmetadata', () => {
+            log('📊 Metadata loaded');
+        });
+
+        audio.addEventListener('canplay', () => {
+            log('✅ Audio can play');
+        });
+
+        audio.addEventListener('error', (e) => {
+            log(`❌ Audio error: ${e.message || 'Unknown error'}`);
+        });
+
+        audio.addEventListener('playing', () => {
+            log('▶️ Audio is now playing');
+        });
+
+        audio.addEventListener('pause', () => {
+            log('⏸️ Audio paused');
+        });
+
+        log('Test page loaded. Click "Test Audio Playback" to begin.');
+    </script>
+</body>
+
+</html>

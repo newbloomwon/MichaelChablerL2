@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>System Sound Check</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            background: #222;
+            color: #fff;
+            text-align: center;
+            padding: 50px;
+        }
+
+        button {
+            font-size: 2rem;
+            padding: 20px 40px;
+            cursor: pointer;
+            background: #0f0;
+            color: #000;
+            border: none;
+            border-radius: 10px;
+        }
+
+        button:active {
+            background: #0a0;
+        }
+
+        #log {
+            margin-top: 20px;
+            color: #aaa;
+            font-family: monospace;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>🔊 System Sound Check</h1>
+    <p>This test generates a BEEP inside your browser (no downloading).</p>
+
+    <button onclick="playBeep()">📢 CLICK TO BEEP</button>
+
+    <div id="log"></div>
+
+    <script>
+        const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+
+        function playBeep() {
+            if (audioCtx.state === 'suspended') {
+                audioCtx.resume();
+            }
+
+            const oscillator = audioCtx.createOscillator();
+            const gainNode = audioCtx.createGain();
+
+            oscillator.type = 'sine';
+            oscillator.frequency.setValueAtTime(440, audioCtx.currentTime); // A4 note
+
+            gainNode.gain.setValueAtTime(0.5, audioCtx.currentTime);
+            gainNode.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 1);
+
+            oscillator.connect(gainNode);
+            gainNode.connect(audioCtx.destination);
+
+            oscillator.start();
+            oscillator.stop(audioCtx.currentTime + 1);
+
+            document.getElementById('log').innerHTML += `<p>Generated Beep at ${new Date().toLocaleTimeString()}</p>`;
+        }
+    </script>
+</body>
+
+</html>
