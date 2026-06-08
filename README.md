@@ -36,6 +36,7 @@ This monorepo is a showcase of advanced, production-grade projects spanning data
 
 ### 1. frodo (Ghost)
 Problem: How to protect privacy in a world of increased surveillance. 
+
 Solution: Frodo searches and scrubs breaches.
 
 ![Frodo screenshot](./screenshots/Frodo.png)
@@ -58,6 +59,7 @@ Ghost (frodo) empowers everyday users to reclaim their digital identity by movin
 ### 2. Discografy
 
 Problem: How to find music and not Muzak, something that involved creativity and soul that resonates beyond what the consolidated industry wants us to hear.
+
 Solution: This would be platform for people to save their favorites and hear new artists and even hear live events.
 
 ![Discografy screenshot](./screenshots/Discocrafy.png)
@@ -79,6 +81,7 @@ Discografy is built for true music lovers—those who crave discovery, not just 
 
 ### 3. punkt_project (Punkt)
 Problem: How to guard against network intrusions.
+
 Solution: This is a clone of Splunk, except it has a design that makes office work enjoyable.
 
 ![Punkt screenshot](./screenshots/Punkt.png)
@@ -125,6 +128,7 @@ LingoVision (BabbleClone) reimagines language learning by immersing users in Spa
 ### 5. AI-Grid-Infrastructure
 ![AI-Grid-Infrastructure screenshot](./screenshots/GridOrchestrator.png)
 Problem: Electric grids are increasingly strained and run higher blackout risks, while also working less efficiently.
+
 Solution: Smart allocation of the grid's resources for peaks and lows.
 
 **Solution Overview:**
