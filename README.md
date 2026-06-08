@@ -126,10 +126,12 @@ LingoVision (BabbleClone) is a language learning app that immerses users in Span
 LingoVision (BabbleClone) reimagines language learning by immersing users in Spanish vocabulary lessons that rely solely on images and native audio—no translations, just pure context-driven understanding. The app’s "thinking gap" method encourages direct neural connections between concepts and words, making learning more natural and memorable. With a clean, modern UI, responsive design, and seamless audio-visual flow, users progress through lessons in a way that feels more like play than study. The backend, powered by Node.js and Supabase, ensures fast, secure access to lesson content, while the frontend delivers a delightful, distraction-free experience for learners of all ages.
 
 ### 5. AI-Grid-Infrastructure
-![AI-Grid-Infrastructure screenshot](./screenshots/GridOrchestrator.png)
+
 Problem: Electric grids are increasingly strained and run higher blackout risks, while also working less efficiently.
 
 Solution: Smart allocation of the grid's resources for peaks and lows.
+
+![AI-Grid-Infrastructure screenshot](./screenshots/GridOrchestrator.png)
 
 **Solution Overview:**
 AI-Grid-Infrastructure is a real-time dashboard and analytics platform for energy grid data from ERCOT and ISO-NE. It streamlines the process of collecting, visualizing, and analyzing live grid information, supporting energy market research and operational decision-making with reliable, accessible insights.
