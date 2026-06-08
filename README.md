@@ -102,6 +102,7 @@ Punkt is a next-generation log aggregation and analysis platform built for enter
 
 ### 4. BabbleClone (LingoVision)
 Problem: An effective language learning app. instead of one where they quickly forget almost everything.
+
 Solution: There is no immediate translation into the native language and instead helps users associate the image and words to build a connection for users to think in the new language.
 
 ![BabbleClone screenshot](./screenshots/BabbelClone.png)
