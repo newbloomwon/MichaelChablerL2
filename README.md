@@ -13,9 +13,9 @@ This repository consolidates five major projects developed from January 2026 to 
 
 
 
-## L2 Builds
+## 
 
-Here are the five L2 builds, listed in order from earliest to latest:
+Here are the five buils, listed in order from earliest to latest:
 
 1. **frodo (Ghost)**
 2. **Discografy**
